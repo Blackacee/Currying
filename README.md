@@ -1,2 +1,11 @@
 # Currying
-Currying is the transformation of a function of n arity or arguments into a sequence of n functions taking only one argument.
+
+var prism = function(l, w, h) {
+ return l * w * h;
+}
+function prism(l) {
+ return function(w) {
+ return function(h) {
+ return l * w * h;
+ }
+ 
